@@ -1,0 +1,325 @@
+/* Estilos generales */
+body, nav, header, main, footer {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+nav, header, main, footer {
+    text-align: center;
+}
+
+nav {
+    background-color: #4c244d;
+    color: white;
+    padding: 1%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1%;
+}
+
+nav a:hover {
+    background-color: #f574f7;
+}
+
+header img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #f574f7;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p, ul, li {
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilos para secciones específicas */
+main.home, main.productos, main.pasteles, main.sucursal {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+main.home {
+    background-color: #fdebeb;
+}
+
+h1.home {
+    color: #f574f7;
+}
+
+main.productos {
+    background-color: #a9d5ff;
+}
+
+h1.productos {
+    color: #175b9b;
+}
+
+main.pasteles {
+    background-color: #f7f574;
+}
+
+h1.pasteles {
+    color: #646208;
+}
+
+main.sucursal {
+    background-color: #d9f1ff;
+}
+
+h1.sucursal {
+    color: #4c244d;
+}
+
+/* Estilos para elementos destacados, productos, pasteles y servicios */
+.destacados, .productos-lista, .pasteles-lista, .servicios-lista {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.destacado, .producto, .pastel, .servicio {
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.destacado h2, .producto h2, .pastel h2, .servicio h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.destacado p, .producto p, .pastel p, .servicio p {
+    line-height: 1.5;
+}
+
+.destacado img, .producto img, .pastel img, .servicio img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #4c244d;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info, .social-media {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.contact-info h4, .social-media h4 {
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+
+
+footer {
+    background-color: #4c244d;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer > .footer-container > .contact-info > p {
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info,
+.social-media {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.contact-info h4,
+.social-media h4 {
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+
+.social-media div {
+    display: flex;
+    justify-content: center;
+}
+
+.Insta {
+    display:block;
+    width:90px;
+    height:98px;
+    background: url(/IMG/REDES.png) no-repeat center;
+    background-position: 15px 0px;
+}
+
+.Facebook {
+    display:block;
+    width:90px;
+    height:90px;
+    background: url(/IMG/REDES.png) no-repeat center;
+    background-position: -70px 0px;
+}
+
+.Twitter {
+    display:block;
+    width:90px;
+    height:90px;
+    background: url(/IMG/REDES.png) no-repeat center;
+    background-position: -240px 0px;
+}
+.mobile-menu {
+    display: none; /* Oculta el menú por defecto */
+}
+
+.menu-items {
+    display: none;
+}
+
+.toggle-menu {
+    display: none;
+    color: white;
+    background-color: #4c244d;
+    padding: 3%;
+    text-align: right;
+    text-decoration: none;
+    margin-bottom: 1%;
+}
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.mobile-menu.active .menu-items {
+    animation: slideIn 0.5s forwards;
+    display:block;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+/* Estilos responsivos */
+@media only screen and (max-width: 600px) {
+    .toggle-menu {
+        display: block;
+    }
+    /* Muestra el menú específico para dispositivos móviles */
+    .mobile-menu {
+        display: none;
+        background-color: #783979;
+    }    
+
+    /* Oculta el menú principal en dispositivos móviles */
+    .desktop-menu {
+        display: none;
+    }
+
+    .menu-items {
+        display: block;
+    }
+
+    .menu-items a {
+        display: block;
+        padding: 10px;
+    }
+
+    header img {
+        max-height: 150px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    ul li {
+        margin-bottom: 8px;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .destacado, .producto, .pastel, .servicio {
+        width: 50%;
+    }
+
+    main div img {
+        width: 50%;
+    }
+
+    figure img {
+        max-width: 100%;
+    }
+}
